@@ -7,6 +7,9 @@ const cors = require("cors");
 app.use(express.json());
 app.use(cors());
 
+// database
+require('./db')
+
 app.listen(port,()=>{
     console.log(`I-notebook server is listening at https://localhost:${port}`)
 })
