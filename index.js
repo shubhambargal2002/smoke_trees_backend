@@ -8,8 +8,11 @@ app.use(express.json());
 app.use(cors());
 
 // database
-require('./db')
+require("./db");
 
-app.listen(port,()=>{
-    console.log(`I-notebook server is listening at https://localhost:${port}`)
-})
+// routes
+app.use(require("./routes/user"));
+
+app.listen(port, () => {
+  console.log(`I-notebook server is listening at https://localhost:${port}`);
+});
