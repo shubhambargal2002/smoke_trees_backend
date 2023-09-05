@@ -10,7 +10,7 @@ router.post("/user", async (req, res) => {
   if (!userName || !address) {
     return res
       .status(400)
-      .json({ success, error: "Please filled the all fields" });
+      .json({ error: "Please filled the all fields" });
   }
 
   try {
